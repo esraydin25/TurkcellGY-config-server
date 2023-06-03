@@ -3,6 +3,12 @@ spring:
     uris: http://localhost:9200
   application:
     name: INVOICE-SERVICE
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/RentACarMikroservice/protocol/openid-connect/certs
+              
   kafka:
     consumer:
       auto-offset-reset: earliest

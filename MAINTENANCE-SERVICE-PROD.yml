@@ -1,6 +1,12 @@
 spring:
   application:
     name: MAINTENANCE-SERVICE
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/RentACarMikroservice/protocol/openid-connect/certs
+              
   datasource:
     url: jdbc:mysql://localhost:3307/maintenancedb
     username: root
