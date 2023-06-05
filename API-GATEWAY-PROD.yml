@@ -18,3 +18,17 @@ eureka:
     prefer-ip-address: true
 server:
   port: 9011
+  
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0    

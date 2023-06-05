@@ -43,3 +43,17 @@ eureka:
     prefer-ip-address: true
 server:
   port: 0
+  
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0  
