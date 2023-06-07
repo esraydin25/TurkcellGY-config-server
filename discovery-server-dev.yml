@@ -21,4 +21,8 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"    
+        include: "*"  
+  zipkin:
+    tracing:
+      endpoint: http://192.168.1.103:9411/api/v2/spans               
+        
